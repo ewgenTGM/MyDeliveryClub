@@ -28,13 +28,14 @@ body {
   padding-left: 35px;
 }
 .input-adress {
-  width: 690px;
+  flex: 0.7;
   background-image: url(../img/home.svg);
 }
 
 .input-search {
   width: 306px;
   background-image: url(../img/search.svg);
+  margin-left: auto;
 }
 .buttons {
   display: flex;
@@ -67,7 +68,14 @@ body {
 .button-icon {
   padding-right: 6px;
 }
-
+.main {
+  background: linear-gradient(
+    180deg,
+    rgba(245, 245, 245, 0) 1.04%,
+    #f5f5f5 100%
+  );
+  margin: 0;
+}
 .promo {
   box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1);
   background: #fff1b8 url(../img/promo-image.jpeg) no-repeat top -70px right -200px /700px;
@@ -91,7 +99,7 @@ body {
 
 .section-heading {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   align-items: center;
 }
 .section-title {
@@ -99,6 +107,7 @@ body {
   font-size: 36px;
   line-height: 42px;
   margin: 0;
+  margin-right: 30px;
 }
 
 .cards {
@@ -114,6 +123,8 @@ body {
   border-radius: 7px;
   overflow: hidden;
   margin-bottom: 30px;
+  flex-basis: 31%;
+  text-decoration: none;
 }
 
 .card-image {
@@ -124,6 +135,9 @@ body {
 
 .card-text {
   padding: 20px 35px 23px 23px;
+}
+.card-text-notoppadding {
+  padding-top: 0;
 }
 
 .card-heading {
@@ -139,6 +153,32 @@ body {
   margin: 0;
 }
 
+.card-title-reg {
+  font-weight: 200;
+}
+
+.card-buttons {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.button-card-text {
+  margin-right: 10px;
+}
+
+.card-price-bold {
+  margin-left: 30px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.ingredients {
+  line-height: 21px;
+  font-size: 18px;
+  color: #8c8c8c;
+}
 .card-tag {
   width: 60px;
   text-align: center;
@@ -154,6 +194,7 @@ body {
 .card-info {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .rating {
@@ -174,6 +215,13 @@ body {
   line-height: 32px;
   color: #8c8c8c;
 }
+.category {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 150px;
+}
+
 .price {
   margin-right: 10px;
 }
@@ -188,4 +236,137 @@ body {
   margin-right: 10px;
   vertical-align: middle;
   border-radius: 50%;
+}
+
+.footer {
+  padding: 60px 0;
+}
+
+.footer-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-nav {
+  margin-right: auto;
+  margin-left: 35px;
+}
+
+.footer-link {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 21px;
+  color: #595959;
+  text-decoration: none;
+}
+
+.footer-link:not(:last-child) {
+  margin-right: 15px;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+}
+.social-link:not(:last-child) {
+  margin-right: 21px;
+}
+
+@media (max-width: 1366px) {
+  .container {
+    max-width: 960px;
+  }
+  .promo {
+    background-size: 700px;
+  }
+  .rating {
+    margin-right: 15px;
+  }
+  .category,
+  .price {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+  .promo {
+    padding: 50px;
+    background-size: 550px;
+    background-position: center right -250px;
+  }
+  .promo-text {
+    font-size: 18px;
+    max-width: 450px;
+  }
+  .card-text {
+    padding: 10px;
+  }
+  .card-tag {
+    padding: 1px 4px;
+  }
+  .card {
+    flex-basis: 49%;
+  }
+  .footer-link {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 620px;
+  }
+  .footer-link {
+    font-size: 14px;
+  }
+  .footer-link:not(:last-child) {
+    margin-right: 10px;
+  }
+  .promo {
+    padding: 30px 50px;
+    background-size: 330px;
+    background-position: center right -120px;
+  }
+  .promo-text {
+    font-size: 18px;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 578px) {
+  .container {
+    max-width: 90%;
+  }
+  .header {
+    flex-wrap: wrap;
+  }
+  .input-adress {
+    order: 5;
+    margin-top: 15px;
+    flex: 1;
+  }
+  .promo-title {
+    line-height: 32px;
+    font-size: 32px;
+  }
+  .promo-text {
+    font-size: 16px;
+  }
+  .promo {
+    margin: 10px 10px;
+    background-image: none;
+    padding: 20px;
+  }
+  .section-title {
+    font-size: 24px;
+  }
+  .card {
+    flex-basis: 100%;
+  }
+  .card-image {
+    width: 100%;
+  }
 }
